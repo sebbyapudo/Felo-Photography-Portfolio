@@ -10,11 +10,11 @@ const addEventOnElements = (elements, eventType, callback) => {
 
 // PRELOADING 
 
-// const loadingElement = document.querySelector("[data-loading]");
+const loadingElement = document.querySelector("[data-loading]");
 
-// window.addEventListener("load", () => {
-//   loadingElement.classList.add("loaded");
-//   document.body.classList.remove("active");
-// })
+window.addEventListener("load", () => {
+  loadingElement.classList.add("loaded");
+  document.body.classList.remove("active");
+})
 
 
