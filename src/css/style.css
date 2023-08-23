@@ -482,7 +482,7 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-60%);
   width: 300px;
   font-weight: inherit;
   display: flex;
@@ -640,7 +640,29 @@ gallery-card .btn-icon img {
 #CATEGORY
 \*-----------------------------------*/
 
+.category {
+  --section-padding: 40px;
+  border-block: 1px solid var(--white_a9);
+}
 
+.category-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px 10px;
+}
+
+.category-item { max-width: calc(50% - 5px); }
+
+.category-card .card-title {
+  color: var(--white_a25);
+  margin-block-end: 10px;
+  text-align: center;
+  transition: var(--transition-2);
+}
+
+.category-card:is(:hover, :focus-visible) .card-title { color: var(--white); }
 
 
 
