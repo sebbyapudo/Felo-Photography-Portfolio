@@ -260,7 +260,7 @@ body {
   letter-spacing: 3.5px;
 }
 
-/* [data-reveal] {
+[data-reveal] {
   transform: translateY(50px);
   opacity: 0;
   transition: var(--transition-3);
@@ -273,7 +273,7 @@ body {
 [data-reveal].revealed {
   transform: translate(0, 0);
   opacity: 1;
-} */
+}
 
 
 /*-----------------------------------*\
