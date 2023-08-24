@@ -8,14 +8,14 @@ const addEventOnElements = (elements, eventType, callback) => {
   }
 }
 
-// PRELOADING 
+// PRELOADING
 
 const loadingElement = document.querySelector("[data-loading]");
 
-window.addEventListener("load", () => {
+window.addEventListener("load", function () {
   loadingElement.classList.add("loaded");
   document.body.classList.remove("active");
-})
+});
 
 // MOBILE NAV TOGGLE
 
@@ -55,6 +55,7 @@ const activeElementOnScroll = function () {
 }
 
 window.addEventListener("scroll", activeElementOnScroll);
+
 
 /**
  * TEXT ANIMATION EFFECT FOR HERO SECTION
@@ -139,7 +140,6 @@ const setLetterEffect = function () {
 // call the letter effect function after window loaded
 window.addEventListener("load", setLetterEffect);
 
-
 /**
  * BACK TO TOP BUTTON
  */
@@ -202,27 +202,24 @@ document.body.addEventListener("mousemove", function (event) {
   }, 100);
 });
 
-// add hovered class
-const hoverActive = () => { cursor.classList.add("hovered"); }
+// add cursor hoverd class
+const hoverActive = function () { cursor.classList.add("hovered"); }
 
-// add hovered class
-const hoverDeactive = () => { cursor.classList.remove("hovered"); }
+// remove cursor hovered class
+const hoverDeactive = function () { cursor.classList.remove("hovered"); }
 
-
+// add hover effect on cursor, when hover on any button or hyperlink
 addEventOnElements(anchorElements, "mouseover", hoverActive);
-addEventOnElements(anchorElements, "mouseover", hoverActive);
-addEventOnElements(anchorElements, "buttons", hoverDeactive);
-addEventOnElements(anchorElements, "buttons", hoverDeactive);
+addEventOnElements(anchorElements, "mouseout", hoverDeactive);
+addEventOnElements(buttons, "mouseover", hoverActive);
+addEventOnElements(buttons, "mouseout", hoverDeactive);
 
+// add disabled class on cursorElement, when mouse out of body
+document.body.addEventListener("mouseout", function () {
+  cursor.classList.add("disabled");
+});
 
-// Add disabled class on cursorElement when mouse out of body
-
-document.body.addEventListener("mouseout", () => {
-  cursor.classList.add("disabled")
-})
-
-// Remove disabled class on cursor element when mouse in body 
-document.body.addEventListener("mouseover", () => {
-  cursor.classList.remove("disabled")
-})
-
+// remove diabled class on cursorElement, when mouse in the body
+document.body.addEventListener("mouseover", function () {
+  cursor.classList.remove("disabled");
+});
