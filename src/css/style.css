@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
+ * copyright 2023 sebby
  */
 
 
@@ -469,10 +469,11 @@ body.active { overflow: hidden; }
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-65%);
+  transform: translateX(-50%);
   width: 300px;
   font-weight: inherit;
   display: flex;
+  font-size: var(--fs-3);
 }
 
 .hero-text {
@@ -1135,6 +1136,13 @@ body.active { overflow: hidden; }
   }
 
   .hero .shape { display: none; }
+
+
+  .hero .wrapper .strong {
+    /* transform: translateX(-80%); */
+    left: 23%;
+    font-size: 7rem;
+  }
 
 
   /**
